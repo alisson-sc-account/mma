@@ -1,0 +1,15 @@
+# Opcional: o Render lê este arquivo se você usar "Blueprint". Pode ignorar e criar o serviço pela tela.
+services:
+  - type: web
+    name: octogono-sexta
+    runtime: node
+    plan: free
+    buildCommand: npm install
+    startCommand: npm start
+    envVars:
+      - key: ADMIN_PASSWORD   # senha do painel admin (você escolhe)
+        sync: false
+      - key: WHATSAPP_NUMBER  # seu número com DDI, ex.: 5511999999999
+        sync: false
+      - key: DATABASE_URL     # string de conexão do Postgres (Neon)
+        sync: false
